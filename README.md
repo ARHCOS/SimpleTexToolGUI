@@ -27,7 +27,11 @@ Just double click on the main.py file or run the following command :
 
 You should see this interface popping up :
 
-![Main Menu](https://github.com/ARHCOS/SimpleTexTool-GUI/tree/main/ressources/main_menu.png?raw=true)
+<p align="center">
+<img src="./ressources/main_menu.png?raw=true"  width="100%">
+<h1 align="center"</h1>
+</p>
+/ressources/main_menu.png?raw=true)
 
 In order to convert a file, just simply drag and drop it in the "drop area", select a conversion method and click convert !
 
