@@ -31,7 +31,7 @@ You should see this interface popping up :
 <img src="./ressources/main_menu.png?raw=true"  width="60%">
 </p>
 
-In order to convert a file, just simply drag and drop it in the "drop area", select a conversion method and click convert !
+In order to convert a file, just simply drag and drop it in the "drop area", select a conversion method and click convert.
 
 Your converted file should appear in the folder it originated from.
 ## Limitations
