@@ -19,7 +19,7 @@ def run_other_script():
     if selected_variable and selected_file_path:
         print(f"Running with {selected_variable} and {selected_file_path}")
         
-        file_name_with_ext = os.path.basename(selected_file_path)  
+        file_name_with_ext = os.path.basename(selected_file_path)
         file_name = os.path.splitext(file_name_with_ext)[0]
         file_extension = os.path.splitext(selected_file_path)[1]
         path = os.path.dirname(selected_file_path)
