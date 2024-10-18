@@ -1,5 +1,5 @@
 
-# SimpleTexTool-GUI
+# SimpleTexToolGUI
 
 A simple texture converter with a GUI for SC games. Based on PVRTexTool.
 

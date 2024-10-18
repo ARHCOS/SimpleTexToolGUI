@@ -20,7 +20,6 @@ def main():
 
     command = "PVRTexToolCLI.exe -i " + full_file_path + o_d + file_path + "/" + file_name + selected_variable + " -ics sRGB" + noout
     
-    print(f"Running command: {command}")
     
     try:
         result = subprocess.run(command, check=True)

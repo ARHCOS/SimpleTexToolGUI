@@ -24,10 +24,6 @@ def run_other_script():
         file_extension = os.path.splitext(selected_file_path)[1]
         path = os.path.dirname(selected_file_path)
         
-        print(f"Full File Path: {selected_file_path}")
-        print(f"File Path: {path}")
-        print(f"File Name: {file_name}")
-        print(f"Selected Conversion: {selected_variable}")
 
         script_directory = os.path.join(os.path.dirname(__file__), "scripts")
         script_path = os.path.join(script_directory, 'conversion.py')
