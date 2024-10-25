@@ -1,7 +1,7 @@
 
 # SimpleTexToolGUI
 
-A simple texture converter with a GUI for SC games. Based on PVRTexTool.
+A simple texture converter for SC Games with a GUI. Based on PVRTexTool.
 
 
 
@@ -10,7 +10,7 @@ A simple texture converter with a GUI for SC games. Based on PVRTexTool.
 
 Before anything, be sure you have [Python 3.10](https://www.python.org/downloads/release/python-31011/) installed.
 
-For the first intall, run the following command in the root folder :
+For the first install, double click on setup.py or run the following command :
 
 ```python
   python setup.py
@@ -38,6 +38,7 @@ Your converted file should appear in the folder it originated from.
 
  - Only supports ktx2png, png2ktx and pvr2png
  - Does NOT support multi file drop
+ - Based on PVRTexToolCLI so it only works on Windows
 
 
 ## Known Issues
