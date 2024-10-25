@@ -9,16 +9,16 @@ def main():
     file_name = sys.argv[3]
     selected_variable = sys.argv[4]
     o_d = " -d "
-    noout = ""
+    end = ""
     
     if selected_variable == ".png":
-        noout = " -noout"
+        end = " -noout"
         o_d = " -d "
     else:
-        noout = ""
+        end = " -ics lRGB -f ETC1,SS,lRGB -q etcnormal"
         o_d = " -o "
 
-    command = "PVRTexToolCLI.exe -i " + full_file_path + o_d + file_path + "/" + file_name + selected_variable + " -ics sRGB" + noout
+    command = "PVRTexToolCLI.exe -i " + full_file_path + o_d + file_path + "/" + file_name + selected_variable + end
     
     
     try:

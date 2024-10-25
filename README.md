@@ -43,4 +43,4 @@ Your converted file should appear in the folder it originated from.
 ## Known Issues
 
 - Sometime during the setup process the script can give you a permission error even though there is no problem. If you encounter this, just check if you have PVRTexToolCLI.exe in the scripts folder and if you have just ignore the error
-
+- After the installation of PVRTexTool you might have an error that it's not in the PATH when converting. To resolve that just add the scripts folder to the system or user PATH
