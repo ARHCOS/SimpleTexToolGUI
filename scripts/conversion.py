@@ -12,7 +12,7 @@ def main():
     end = ""
     
     if selected_variable == ".png":
-        end = " -noout"
+        end = " -noout -ics sRGB"
         o_d = " -d "
     else:
         end = " -ics lRGB -f ETC1,SS,lRGB -q etcnormal"
