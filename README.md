@@ -36,12 +36,17 @@ In order to convert a file, just simply drag and drop it in the "drop area", sel
 Your converted file should appear in the folder it originated from.
 ## Limitations
 
- - Only supports ktx2png, png2ktx and pvr2png
- - Does NOT support multi file drop
- - Based on PVRTexToolCLI so it only works on Windows
+ - Only supports ktx2png, png2ktx, pvr2png and sctx2png
+ - Does NOT support multiple file drop
+ - Based on [PVRTexToolCLI](https://developer.imaginationtech.com/solutions/pvrtextool/) and [SCXT-Converter](https://github.com/Daniil-SV/SCTX-Converter) so it only works on Windows
 
 
 ## Known Issues
 
-- Sometime during the setup process the script can give you a permission error even though there is no problem. If you encounter this, just check if you have PVRTexToolCLI.exe in the scripts folder and if you have just ignore the error
-- After the installation of PVRTexTool you might have an error that it's not in the PATH when converting. To resolve that just add the scripts folder to the system or user PATH
+- After the installation of PVRTexTool you might have an error that it's not in the PATH when converting. To resolve that just add the "scripts" folder to the system or user PATH
+
+## Credits
+
+ - As stated before, this project is mainly based on [PVRTexToolCLI](https://developer.imaginationtech.com/solutions/pvrtextool/) by [ImaginationTech](https://developer.imaginationtech.com/) for everything about KTX and PVR.
+
+ - Big thanks to [Daniil SV](https://github.com/Daniil-SV) for the [SCTX conversion](https://github.com/Daniil-SV/SCTX-Converter) part and generally for helping me and giving feedback for this project

@@ -11,7 +11,7 @@ def run_script(script_path):
     print(f"Running {script_path} ...")
     subprocess.run([sys.executable, script_path])
 
-modules_to_install = ['requests', 'customtkinter', 'tkinterdnd2','mega.py']
+modules_to_install = ['requests', 'customtkinter', 'tkinterdnd2', 'mega.py', 'Pillow', 'pylzham', 'texture2ddecoder', 'zstandard']
 
 current_folder = os.path.dirname(os.path.abspath(__file__))
 script_folder = os.path.join(current_folder, 'scripts')

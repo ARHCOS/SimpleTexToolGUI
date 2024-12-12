@@ -3,13 +3,12 @@ import subprocess
 import os
 
 def main():
-    
     full_file_path = sys.argv[1]
     file_path = sys.argv[2]
     file_name = sys.argv[3]
     selected_variable = sys.argv[4]
     o_d = " -d "
-    end = ""
+    noout = ""
     
     if selected_variable == ".png":
         end = " -noout -ics sRGB"
@@ -19,7 +18,6 @@ def main():
         o_d = " -o "
 
     command = "PVRTexToolCLI.exe -i " + full_file_path + o_d + file_path + "/" + file_name + selected_variable + end
-    
     
     try:
         result = subprocess.run(command, check=True)

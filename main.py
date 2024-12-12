@@ -14,7 +14,7 @@ def drop(event):
         global selected_file_path
         selected_file_path = file_path
         file_path_label.configure(text=f"Dropped file: {file_path}")
-
+        
 def run_other_script():
     if selected_variable and selected_file_path:
         print(f"Running with {selected_variable} and {selected_file_path}")
@@ -24,11 +24,23 @@ def run_other_script():
         file_extension = os.path.splitext(selected_file_path)[1]
         path = os.path.dirname(selected_file_path)
         
+        if file_extension == '.sctx':
+            script_directory = os.path.join(os.path.dirname(__file__), "scripts")
+            script_path = os.path.join(script_directory, 'SctxConverter.exe')
+            command = f'{script_path} decode {selected_file_path}'
+            try:
+                result = subprocess.run(command, check=True, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+                print(result.stdout.decode())
+                if result.stderr:
+                    print(result.stderr.decode())
+            except subprocess.CalledProcessError as e:
+                print(f"Something went wrong : {e}")
 
-        script_directory = os.path.join(os.path.dirname(__file__), "scripts")
-        script_path = os.path.join(script_directory, 'conversion.py')
+        else:
+            script_directory = os.path.join(os.path.dirname(__file__), "scripts")
+            script_path = os.path.join(script_directory, 'conversion.py')
 
-        result = subprocess.run(['python', script_path, selected_file_path, path, file_name, selected_variable])
+        result = subprocess.run([script_path, selected_file_path, path, file_name, selected_variable])
         
         if result.returncode == 0:
             print("Script executed")
@@ -40,7 +52,7 @@ def run_other_script():
 root = TkinterDnD.Tk()
 root.title("SimpleTexTool GUI")
 
-root.geometry("800x600")
+root.geometry("1200x800")
 
 ctk.set_appearance_mode("dark")
 ctk.set_default_color_theme("blue")
@@ -58,7 +70,10 @@ button2 = ctk.CTkButton(left_frame, text="pvr2png", command=lambda: update_varia
 button2.pack(pady=(10, 5))
 
 button3 = ctk.CTkButton(left_frame, text="png2ktx", command=lambda: update_variable("png2ktx", ".ktx"))
-button3.pack(pady=(10, 20))
+button3.pack(pady=(10, 5))
+
+button4 = ctk.CTkButton(left_frame, text="sctx2png", command=lambda: update_variable("scxt2png", ".png"))
+button4.pack(pady=(10, 20))
 
 execute_button = ctk.CTkButton(left_frame, text="Convert", command=run_other_script)
 execute_button.pack(side="bottom", pady=10)
