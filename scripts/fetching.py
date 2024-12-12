@@ -21,15 +21,18 @@ def download_file_from_mega(url, destination_folder):
     except Exception as e:
         pass
 
-
-def download_file_from_github(url, destination_folder):
+def download_file_from_github(url, destination_folder, filename):
     try:
+        if not os.path.exists(destination_folder):
+            os.makedirs(destination_folder)
+        
+        print(f"Downloading SctxConverter...")
         reponse = requests.get(url)
         
         if reponse.status_code == 200:
-            with open(destination_folder, 'wb') as file:
+            file_path = os.path.join(destination_folder, filename)
+            with open(file_path, 'wb') as file:
                 file.write(reponse.content)
-            print(f"The file has been successfully downloaded")
         else:
             print(f"Failed to download the file. Response status: {reponse.status_code}")
     except Exception as e:
@@ -37,8 +40,11 @@ def download_file_from_github(url, destination_folder):
 
 
 url = 'https://mega.nz/file/3L41DbTB#6UvK-Ae2PtsdG6_8JuL-kIcImEOxsnrnIvqvT91Eo9k'
-github_url = 'https://mega.nz/file/2PB0SL5Y#xedYVKW0k-YKBaMhcDgbIQGa5cmeio__zAXhhJ_GoaM'
+github_url = 'https://github.com/Daniil-SV/SCTX-Converter/releases/download/1.0.0/SctxConverter.exe'
+sc_script_name = 'SctxConverter.exe'
 destination_folder = './scripts'
 
-download_file_from_mega(github_url, destination_folder)
 download_file_from_mega(url, destination_folder)
+download_file_from_github(github_url, destination_folder, sc_script_name)
+
+print('Done !')
