@@ -59,7 +59,7 @@ If the SCTX file is going to be used for a 3D model you **NEED** to enable the "
 ## Limitations
 
  - Does NOT support multiple file drop
- - Based on [PVRTexToolCLI](https://developer.imaginationtech.com/solutions/pvrtextool/) and [SCXT-Converter](https://github.com/Daniil-SV/SCTX-Converter) so it only works on Windows
+ - Based on [PVRTexToolCLI](https://developer.imaginationtech.com/solutions/pvrtextool/) and [SCTX-Converter](https://github.com/Daniil-SV/SCTX-Converter) so it only works on Windows
 
 
 ## Known Issues
