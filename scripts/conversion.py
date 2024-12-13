@@ -3,6 +3,7 @@ import subprocess
 import os
 
 def main():
+    
     full_file_path = sys.argv[1]
     file_path = sys.argv[2]
     file_name = sys.argv[3]
@@ -18,6 +19,7 @@ def main():
         o_d = " -o "
 
     command = "PVRTexToolCLI.exe -i " + full_file_path + o_d + file_path + "/" + file_name + selected_variable + end
+    
     
     try:
         result = subprocess.run(command, check=True)
