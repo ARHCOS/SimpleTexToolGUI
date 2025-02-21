@@ -10,7 +10,7 @@ A simple texture converter for SC Games with a GUI. Based on PVRTexTool.
 
 Before anything, be sure you have [Python 3.10](https://www.python.org/downloads/release/python-31011/) installed.
 
-For the first install, double click on setup.py or run the following command :
+For the first install, double click on setup.bat file or run the following command :
 
 ```python
   python setup.py
@@ -19,7 +19,7 @@ For the first install, double click on setup.py or run the following command :
 Wait until the script finish and you'll be good to go !
 ## How to use ?
 
-Just double click on the main.py file or run the following command :
+You just have to double click on the run.bat file or run the following command :
 
 ```python
   python main.py
@@ -50,11 +50,11 @@ SCTX is a new format created by SC and it is now implemented and almost all of t
 - The actual texture in the form a PNG file
 - A JSON file handling properties
 
-If all you want is the texture, you can delete the JSON file but what you need to know is that the JSON file is **REQUIRED** if you want to convert the PNG texture back to SCTX.
+If all you want is the texture, you can leave the "Export JSON file" box unchecked but what you need to know is that the JSON file is **REQUIRED** if you want to convert the PNG texture back to SCTX.
 
 To convert back the PNG texture to SCTX you need to select the "png2sctx" option, drag and drop either the PNG or JSON file and click convert. You obviously need to have both the PNG and JSON file in the same directory.
 
-If the SCTX file is going to be used for a 3D model you **NEED** to enable the "Compress Data" option or your texture won't work.
+If the SCTX file is going to be used for a 3D model you **MAY** need to enable the "Compress Data" option or your texture may not work.
 
 ## Limitations
 
