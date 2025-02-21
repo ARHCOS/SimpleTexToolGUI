@@ -4,6 +4,7 @@ import os
 
 def main():
     
+    # Récupérer les arguments passés
     full_file_path = sys.argv[1]
     file_path = sys.argv[2]
     file_name = sys.argv[3]
@@ -20,8 +21,10 @@ def main():
 
     command = "PVRTexToolCLI.exe -i " + full_file_path + o_d + file_path + "/" + file_name + selected_variable + end
     
+    #print(f"Running command: {command}")
     
     try:
+        # Exécuter la commande
         result = subprocess.run(command, check=True)
         print("Command executed successfully with return code:", result.returncode)
     except subprocess.CalledProcessError as e:
