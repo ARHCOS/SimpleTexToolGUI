@@ -10,7 +10,7 @@ A simple texture converter for SC Games with a GUI. Based on PVRTexTool.
 
 Before anything, be sure you have [Python 3.10](https://www.python.org/downloads/release/python-31011/) installed.
 
-For the first install, double click on setup.bat file or run the following command :
+For the first install, double click on the setup.bat file or run the following command :
 
 ```python
   python setup.py
